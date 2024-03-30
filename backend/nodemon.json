@@ -1,0 +1,7 @@
+{
+    "env":{
+        "MONGO_USER":"gagansandhwan589",
+        "MONGO_PASSWORD":"zyl9tcHfPDTifhZK",
+        "MONGO_DB":"resturant"
+    }
+}

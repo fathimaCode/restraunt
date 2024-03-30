@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lalezar", system-ui;
+  list-style-type: none;
+  text-decoration: none;
+}
+:root{
+  --primary-color:#fab404;
+  --secondary-color:#fff;
+  --black-color:#020202;
+  --green-color:#119705;
+  --red-color:#f73302;
+}
+a{
+  color: var(--black-color);
+}
+.logo{
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
+}
+.header{
+  display: flex;
+ 
+  margin: 0.5% auto;
+  align-items: center;
+  justify-content: center;
+}
+.menus ul {
+  display: flex;
+}
+.menus ul li a{
+  padding: 10px 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.menus ul li a:hover {
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  color: var(--secondary-color);
+}
+.food_bg_container{
+  border: 1px solid var(--black-color);
+  overflow: hidden;
+  height: 900px;
+}
+.food_bg_container img{
+  width: 100%;
+  height: 100%;
+ object-fit: fill;
+}
+.admin_container{
+  background-color: var(--primary-color);
+  border: 1px solid black;
+  height: 1000px;
+  width: 100%;
+}
+h2{
+  margin: 10px 10px 0px 900px;
+  color: var(--secondary-color);
+  font-size: 2.0em;
+}
+.loginForm{
+  padding: 20px;
+  margin:2% auto;
+  background-color: var(--secondary-color);
+  display: flex;
+  width: 500px;
+ flex-direction: column;
+  border: 3px solid black;
+}
+.loginForm input{
+  padding: 10px;
+  margin: 5px;
+  font-size: 1.0em;
+}
+.loginForm button{
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  padding: 10px;
+  margin: 5px 95px;
+  font-size: 1.2em;
+}
+.loginForm button:hover{
+  color:var(--secondary-color);
+  background-color: var(--primary-color);
+}
+.admin_dashboard{
+  height: 500px;
+  width: 800px;
+  margin: 1% auto;
+}
+.FoodContainer{
+  margin: 2% auto;
+  width: 500px;
+}
+.FoodContainer h1{
+  margin-left: 120px;
+}
+.foodForm{
+  display: flex;
+  flex-direction: column;
+}
+.foodForm input{
+  padding: 10px;
+  margin: 5px;
+}
+.addbtn{
+  font-size: 1.3em;
+  width: 200px;
+  padding: 10px;
+  background-color: var(--primary-color);
+  border: var(--primary-color);
+  margin-left: 150px;
+  cursor: pointer;
+}
+.addbtn:hover{
+  background-color: var(--green-color);
+  color: var(--secondary-color);
+}
+.menuContainer{
+ 
+  height: 800px;
+  margin: 10px;
+  display: grid;
+  overflow: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  gap:10px
+}
+.foodCard{
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  height: 400px;
+  width: 300px;
+  border-radius: 15px;
+  
+}
+.foodimg{
+  
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.foodimg img{
+  height: 100%;
+ 
+  width: 100%;
+  object-fit: cover;
+}
+.fooddetails{
+ 
+  height: 200px;
+ 
+}
+.fooddetails .title{
+  margin: 15px;
+  font-size: 1.5em;
+}
+hr{
+  margin: 0px 25px;
+}
+.price,.qty{
+  margin: 5px 10px;
+  font-size: 1.0em;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+.cartBtn{
+  border: none;
+  padding: 10px;
+ margin-left: 75px;
+ background-color: var(--primary-color);
+ cursor: pointer;
+}
+.cartBtn:hover{
+  background-color: var(--green-color);
+  color: var(--secondary-color);
+}
+.calo{
+  display: flex;
+  flex-direction: column;
+}
+span{
+  margin: 5px;
+  font-size: 0.8em;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  font-weight: 100;
+}
+.left_view{
+  display: flex;
+  flex-direction: column;
+}
+.quantiyText{
+  width: 100px;
+  margin: 5px;
+}
+.ri-shopping-cart-line{
+  position: relative;
+}
+.ri-shopping-cart-line span{
+  position: absolute;
+  top: 5;
+  background-color: var(--secondary-color);
+  color: var(--black-color);
+}
+.ri-shopping-cart-line :hover{background-color: var(--primary-color);}
+.myCart{
+  display: flex;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+.cartViewContainer{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  margin: 10px;
+}
+.cartdetails{
+  margin: 10px;
+}
+.userDetails{
+  margin: 15px;
+}
+.heading{
+  padding: 20px;
+  font-size: 1.5em;
+}
+.thead{
+  border: 1px solid var(--black-color);
+}
+.tbl_row{
+  margin: 5px;
+  padding: 15px;
+}
+.cartItems{
+  padding: 25px;
+}
+.cartItems img{
+  border-radius: 15px;
+}
+.cartdetails{
+  border: 1px solid beige;
+  height: 600px;
+  width: 800px;
+  margin-left: 100px;
+  overflow: auto;
+}
+.row_details{
+  display: flex;
+}
+.userInfo{
+  display: flex;
+  flex-direction: column;
+}
+.userInfo input{
+  padding: 10px;
+  width: 300px;
+  margin: 10px;
+}
+.predictBtn{
+  border: none;
+  padding: 10px;
+  width: 200px;
+  margin-left: 65px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+.predictBtn:hover{
+  background-color: var(--green-color);
+  color: var(--secondary-color);
+}
+.predict{
+  background-color: var(--secondary-color);
+  color: var(--black-color);
+  font-size: 1.2em;
+}
+.predict.success{
+  
+  color: var(--green-color);
+  
+}
+.predict.failed{
+  
+  color: var(--red-color);
+  
+}
+.totalContainer{
+  display: flex;
+}
+.totalContainer p{
+  margin-left: 150px;
+}
+.purchaseBtn{
+  width: 200px;
+  border: none;
+  background-color: var(--primary-color);
+  padding: 10px;
+  margin: 30px;
+  cursor: pointer;
+}
+.purchaseBtn:hover{
+  background-color: var(--green-color);
+  color: var(--secondary-color);
+}
+select{
+  width: 300px;
+  padding: 10px;
+  margin: 6px 10px;
+}
+.ri-edit-box-fill{
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.MyBills{
+  margin: 2% auto;
+
+}
+.user_details{
+  margin: 5% auto;
+  width: 800px;
+  overflow: auto;
+  height: 600px;
+}
+.user_bill{
+  margin-left: 550px;
+  font-size: 1.5em;
+  
+}
+.color_change{
+  color:var(--red-color)
+}
+@media screen and (max-width: 1400px) {
+  .menuContainer{
+ 
+    height: 800px;
+    margin: 10px;
+    display: grid;
+    overflow: auto;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap:10px
+  }
+}
+@media screen and (max-width: 729px) {
+  .menuContainer{
+ 
+    height: 800px;
+    margin: 10px;
+    display: grid;
+    overflow: auto;
+    grid-template-columns: 1fr 1fr  ;
+    gap:10px
+  }
+}
