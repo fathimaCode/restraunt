@@ -25,12 +25,11 @@ function UpdateStock() {
         event.preventDefault();
 
         const product_data = {
-            stock:stock,
-            id:pid
+            quantity:stock
 
             }
             axios
-            .post('http://127.0.0.1:5000/updateStock', product_data)
+            .put(`http://localhost:3001/productRoute/update/${pid}`, product_data)
             .then((response: { data: any; }) => {
               console.log(response)
               redirect('/dashboard')

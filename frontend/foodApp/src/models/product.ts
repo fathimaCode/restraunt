@@ -4,7 +4,7 @@ export interface Product{
     price:number;
     quantity:number;
     img:String;
-    created_at:String;
+   
     
     
 }

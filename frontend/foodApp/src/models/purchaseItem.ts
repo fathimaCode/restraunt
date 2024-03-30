@@ -5,5 +5,5 @@ export interface PurchaseItem{
     created_at:String;
     productId: number;
     subtotal:number;
-    calories:number;
+   
 }

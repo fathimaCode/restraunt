@@ -7,5 +7,5 @@ export interface BillView{
     title:String;
     productId: number;
     subtotal:number;
-    calories:number;
+  
 }

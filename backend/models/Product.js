@@ -11,7 +11,7 @@ let productSchema = new Schema({
     price:{
         type:String
     },
-    img:{
+    imageFile:{
         type:String
     },
     created_at:{

@@ -67,7 +67,7 @@ function AddFood() {
                   console.log(response.data)
                   uploadFile(file)
                   Swal.fire({
-                    title: "Thank You",
+                    title: "Success",
                     text: `product added`,
                     icon: "success"
                   });

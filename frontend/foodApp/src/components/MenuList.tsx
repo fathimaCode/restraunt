@@ -11,16 +11,16 @@ function MenuList() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:5000/foodList');
-                const products: Product[] = response.data.map((item: any) => ({
-                    _id: item[0],
-                    title: item[1],
-                    quantity: item[2],
-                    price: item[3],
-                    img: item[4],
-                    created_at: item[5],
-                    calories: item[6]
-                }));
+                const response = await axios.get('http://localhost:3001/productRoute/getAll');
+                const products:Product[] = response.data.data.map((item:any)=>({
+          
+                    _id: item._id,
+                    title: item.title,
+                    quantity: item.quantity,
+                    price: item.price,
+                    img: item.imageFile,
+                    
+                  }));
                 setProductList(products);
             } catch (error) {
                 console.error('There was a problem fetching the data:', error);
@@ -61,13 +61,13 @@ function MenuList() {
 
             const createdAt = new Date().toISOString();
             const price = selectedProduct?.price;
-            const calori = selectedProduct?.calories;
+           
             const updateCart: Carts[] = [{
                 quantity: quantityValue,
                 product: selectedProduct!,
                 created_at: createdAt,
                 subtotal: quantityValue * price!,
-                calories: quantityValue * calori!
+                
             }];
         
             setCart(prev => ([
@@ -83,7 +83,7 @@ function MenuList() {
                     <div className='foodCard'>
                         <div className='foodimg'>
                             <img onClick={() => productClick(item._id)}
-                                src={`http://127.0.0.1:5000/static/product/${item.img}`} alt={item.title} />
+                                src={`http://localhost:3001/product/${item.img}`}  />
                         </div>
                         <div className='fooddetails'>
                             <div className='title'>{item.title}</div>
@@ -93,10 +93,7 @@ function MenuList() {
                                     <div className='price'> Price: Rs.{item.price}</div>
                                     <p className='quantiyText'>Selected qt:{quantities[item._id] || 0}</p>
                                 </div>
-                                <div className='calo'>
-                                    <div className='qty'> Qty: {item.quantity}</div>
-                                    <span>Calories:{item.calories}</span>
-                                </div>
+                               
                             </div>
                             <button className='cartBtn' onClick={addToCart(item._id)}>Add To Cart</button>
                         </div>

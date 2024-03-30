@@ -47,9 +47,9 @@ function CartPage() {
             let cc =0;
             let bb=0
             parsedCartData.forEach(item=>{
-                cc +=item.calories
+           
                 bb +=item.subtotal
-               console.log(item.calories)
+               
             })
             setCartItem(parsedCartData)
           
@@ -89,7 +89,7 @@ function CartPage() {
         const updatedCarts = carts.filter(item => item.product._id !== productId);
         setCartItem(updatedCarts);
         updatedCarts.forEach(item => {
-          updatedOrderCalories += item.calories;
+         
           updatedBill += item.subtotal;
         });
         localStorage.setItem("cart", JSON.stringify(updatedCarts));
@@ -117,7 +117,7 @@ function CartPage() {
           created_at: item.created_at,
           productId: item.product._id,
           subtotal: item.subtotal,
-          calories: item.calories
+         
         }));
         
         const bilItems: BillView[] = carts.map((item, index) => ({
@@ -127,7 +127,7 @@ function CartPage() {
           title:item.product.title,
           purchaseImage:item.product.img,
           subtotal: item.subtotal,
-          calories: item.calories
+        
         }));
         const purchase_Data ={
           username:name,
@@ -195,7 +195,7 @@ function CartPage() {
                     
                     <tr  key={index} className='tbl_row'>
                         <td className='cartItems'>{index+1}</td>
-                        <td className='cartItems'> <img src={`http://127.0.0.1:5000/static/product/${item.product.img}`}  alt="" height={80}width={80} /></td>
+                        <td className='cartItems'> <img   src={`http://localhost:3001/product/${item.img}`}   alt="" height={80}width={80} /></td>
                         <td className='cartItems'>
                             <div className='col'>
                             <p>{item.product.title}</p>

@@ -5,5 +5,5 @@ export interface Carts{
     created_at:String;
     product: Product;
     subtotal:number;
-    calories:number;
+  
 }
